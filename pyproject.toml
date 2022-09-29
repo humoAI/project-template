@@ -3,7 +3,7 @@ line_length = 80
 profile = "black"
 
 [tool.black]
-line_length = 80
+line_length = 120
 
 [tool.pyright]
 typeCheckingMode = "basic"
