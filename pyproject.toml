@@ -1,0 +1,16 @@
+[tool.isort]
+line_length = 80
+profile = "black"
+
+[tool.black]
+line_length = 80
+
+[tool.pyright]
+typeCheckingMode = "basic"
+
+reportIncompatibleMethodOverride = "information"
+reportPrivateImportUsage = "information"
+reportOptionalSubscript = "none"
+
+pythonVersion = "3.8"
+pythonPlatform = "Linux"
