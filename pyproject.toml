@@ -4,6 +4,7 @@ profile = "black"
 
 [tool.black]
 line_length = 120
+target-version = ['py38', 'py39', 'py310']
 
 [tool.pyright]
 typeCheckingMode = "basic"
