@@ -1,3 +1,13 @@
+[project]
+name = "project-template"
+description = "Default repo template for ML/DL projects"
+readme = "README.md"
+requires-python = ">=3.8"
+version = "0.0.1"
+authors = [
+	{name = "Yakhyokhuja Valikhujaev", email = "yakhyo9696@gmail.com"}
+]
+
 [tool.isort]
 line_length = 120
 
