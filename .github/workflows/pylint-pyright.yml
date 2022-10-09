@@ -1,4 +1,4 @@
-name: Humo Pylint&Pyright
+name: Humo py{right/lint}
 
 on:
   push:
