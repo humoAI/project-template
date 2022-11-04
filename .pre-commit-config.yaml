@@ -1,1 +1,60 @@
-humo-tools/.pre-commit-config.yaml
+repos:
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        args: [--profile, black]
+        name: isort (python)
+      - id: isort
+        args: [--profile, black]
+        name: isort (cython)
+        types: [cython]
+      - id: isort
+        args: [--profile, black]
+        name: isort (pyi)
+        types: [pyi]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: check-docstring-first
+      - id: check-json
+      - id: requirements-txt-fixer
+      - id: no-commit-to-branch
+        args: ['--branch', 'main'] # by default master and main branch are protected if no branch argument set
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+        language_version: python3.8
+
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.273
+    hooks:
+      - id: pyright
+        name: pyright
+        entry: pyright
+        language: system
+        types: [python]
+        args: ["--lib"]
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args: [
+            "-rn", # Only display messages
+            "-sn", # Don't display the score
+            "--rcfile=.pylintrc", # Link to your config file
+            "--load-plugins=pylint.extensions.docparams", # Load an extension
+          ]
+  - repo: https://github.com/open-mmlab/pre-commit-hooks
+    rev: v0.2.0  # Use the rev to fix revision
+    hooks:
+      - id: check-algo-readme
+      - id: check-copyright
+        args: ["src", "tools", "tests", "demo"]  # the dir_to_check with expected directory to check

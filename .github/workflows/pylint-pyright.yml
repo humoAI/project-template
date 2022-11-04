@@ -1,4 +1,4 @@
-name: pylint-pyright checks
+name: Humo py{lint|right}
 
 on:
   push:

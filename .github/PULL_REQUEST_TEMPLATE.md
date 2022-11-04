@@ -10,7 +10,7 @@ If we didn't discuss your PR in Github issues there's a high chance it will not 
 The following links the related issue to the PR (https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 -->
 
-Fixes #\<issue_number>
+Fixes # <issue_number>
 
 ### Does your PR introduce any breaking changes? If yes, please list them.
 
