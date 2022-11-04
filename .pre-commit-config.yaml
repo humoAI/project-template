@@ -30,7 +30,7 @@ repos:
         language_version: python3.8
 
   - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.273
+    rev: v1.1.278
     hooks:
       - id: pyright
         name: pyright
@@ -52,9 +52,3 @@ repos:
             "--rcfile=.pylintrc", # Link to your config file
             "--load-plugins=pylint.extensions.docparams", # Load an extension
           ]
-  - repo: https://github.com/open-mmlab/pre-commit-hooks
-    rev: v0.2.0  # Use the rev to fix revision
-    hooks:
-      - id: check-algo-readme
-      - id: check-copyright
-        args: ["src", "tools", "tests", "demo"]  # the dir_to_check with expected directory to check
