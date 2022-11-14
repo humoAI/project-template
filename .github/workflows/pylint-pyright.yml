@@ -31,6 +31,3 @@ jobs:
         git submodule init
         git submodule update
         pylint $(git ls-files '*.py') --rcfile=.pylintrc
-    - name: Analysing the code with pyright
-      run: |
-        pyright $(git ls-files '*.py') --lib
